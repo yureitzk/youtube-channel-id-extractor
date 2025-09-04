@@ -27,7 +27,7 @@ export default function Channels({
 			) : (
 				<>
 					{channels?.map((channel, i) => (
-						<li key={i} className='mb-3'>
+						<li key={i} className='mb-4'>
 							<ChannelInfo
 								id={channel.id}
 								channelId={channel.channelId}

@@ -138,7 +138,7 @@ export default function ChannelInfo({ id, channelId, name }: ChannelInfoProps) {
 					)}
 					{id && (
 						<>
-							<Accordion variant='light' isCompact={false}>
+							<Accordion variant='light' isCompact={true}>
 								<AccordionItem key='1' title={<p className='font-bold'>{name}</p>}>
 									{renderChannelDetails()}
 								</AccordionItem>

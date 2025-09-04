@@ -36,7 +36,7 @@ export default function History() {
 					<Channels
 						pageNumber={currentPage}
 						pageSize={channelsLimit}
-						className='mb-2'
+						className='mb-5'
 					/>
 
 					<Pagination

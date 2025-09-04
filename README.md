@@ -1,6 +1,6 @@
 # YouTube Channel Id Extractor
 
-A simple website to get a channel Id from a YouTube link.
+A simple website to get a channel id from a YouTube link.
 
 ## Features 
 

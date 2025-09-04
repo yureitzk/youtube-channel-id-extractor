@@ -1,0 +1,83 @@
+{
+	"MetaData": {
+		"title": "Youtube Channel Id Extractor",
+		"description": "A tool to extract Youtube Channel ID",
+		"keywords": "youtube channel information, youtube channel id, get youtube channel id, extract youtube rss feed, youtube free channel parser"
+	},
+	"NotFoundPage": {
+		"title": "Page not found",
+		"description": "Please double-check the browser address bar or use the navigation to go to a known page."
+	},
+	"History": {
+		"title": "Channel History",
+		"description": "The Channels you search for are saved offline in your browser automatically. You can see all of them here to manage them better."
+	},
+	"MetaDataHistory": {
+		"title": "History"
+	},
+	"Faq": {
+		"title": "Frequently Asked Questions"
+	},
+	"MetaDataFaq": {
+		"title": "FAQ",
+		"description": "Find answers to common questions about extracting YouTube Channel IDs. Our FAQ page covers troubleshooting, usage tips, and more to help you get the most out of our tool"
+	},
+	"Questions": {
+		"question1": "What is a YouTube Channel ID?",
+		"answer1": "A YouTube Channel ID is a unique identifier for a YouTube channel. It's used in various YouTube APIs and can be helpful for developers and content creators.",
+		"question2": "How do I use this tool?",
+		"answer2": "Simply paste the URL of a YouTube channel into the input field on the home page and click the search button. The tool will extract and display the channel ID for you.",
+		"question3": "What URL formats are supported?",
+		"answer3": "<p>This tool supports the following URL formats:</p><support>The tool also supports links from Wayback Machine:</support>"
+	},
+	"DeleteAllChannelsButton": {
+		"title": "Warning",
+		"clear": "Clear",
+		"cancel": "Cancel",
+		"confirm": "Confirm",
+		"confirmation": "Are you sure you want to continue?",
+		"note": "This action is <strong>irreversible</strong>. Once you proceed, the data will be permanently deleted and cannot be recovered."
+	},
+	"ChannelDeleteButton": {
+		"label": "Delete Channel"
+	},
+	"ChannelInfo": {
+		"title": "Channel Info",
+		"channelId": "Channel ID",
+		"channelUrl": "Channel URL",
+		"rssUrl": "RSS Feed URL",
+		"copyToClipboard": "Copy to clipboard"
+	},
+	"ExtractorInput": {
+		"placeholder": "Enter YouTube URL or channel @handle",
+		"submitLabel": "Submit YouTube channel URL"
+	},
+	"Spinner": {
+		"text": "Loading..."
+	},
+	"Channels": {
+		"loadingText": "Loading..."
+	},
+	"Footer": {
+		"githubImgAlt": "Github logo",
+		"githubLink": "View on GitHub"
+	},
+	"Header": {
+		"logoImgAlt": "YouTube logo",
+		"title": "Channel ID Extractor",
+		"history": "History",
+		"faq": "FAQ"
+	},
+	"ThemeSwitch": {
+		"themeToggle": "Toggle Theme",
+		"themeToggleLoading": "Loading Light/Dark Toggle"
+	},
+	"Offline": {
+		"title": "You are offline",
+		"message": "It looks like you're not connected to the internet. Please check your network and try again.",
+		"retry": "Retry Connection"
+	},
+	"RefreshButton": {
+		"text": "Retry Connection"
+	}
+}

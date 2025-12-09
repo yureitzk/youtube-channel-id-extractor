@@ -11,7 +11,7 @@ export class DB extends Dexie {
 	constructor() {
 		super('youtubeData');
 		this.version(1).stores({
-			channels: '++id, channelId, name',
+			channels: '++id, &channelId, name',
 		});
 	}
 }

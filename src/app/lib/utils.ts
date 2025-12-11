@@ -14,3 +14,9 @@ export function generateRsslUrl(id: string): string {
 	const baseUrl = 'https://www.youtube.com/feeds/videos.xml?channel_id';
 	return `${baseUrl}=${id}`;
 }
+
+export function getWebsiteDomain(): string {
+	const websiteDomain = process.env.WEBSITE_DOMAIN || 'example.com';
+
+	return websiteDomain;
+}

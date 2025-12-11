@@ -5,7 +5,7 @@ import { getTranslations } from 'next-intl/server';
 import Footer from '@/app/components/Footer';
 import Header from '@/app/components/Header';
 import '@/app/globals.css';
-import { getWebsiteDomain } from '@/app/lib/helpers';
+import { getWebsiteDomain } from '@/app/lib/utils';
 import { Providers } from '@/app/providers';
 import { routing } from '@/i18n/routing';
 

@@ -1,5 +1,5 @@
 import type { MetadataRoute } from 'next';
-import { getWebsiteDomain } from './lib/helpers';
+import { getWebsiteDomain } from './lib/utils';
 
 export default function robots(): MetadataRoute.Robots {
 	return {

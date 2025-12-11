@@ -1,7 +1,7 @@
 {
   "name": "youtube-channel-id-extractor",
   "version": "0.1.0",
-  "private": true,
+  "author": "yureitzk",
   "scripts": {
     "dev": "next dev",
     "build": "next build",

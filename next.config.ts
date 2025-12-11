@@ -15,6 +15,9 @@ const nextConfig: NextConfig = {
 	serverExternalPackages: ['header-generator', 'pino', 'pinno-pretty'],
 	reactStrictMode: true,
 	experimental: {
+		serverActions: {
+			bodySizeLimit: '1MB',
+		},
 		optimizePackageImports: ['lucide-react', '@nextui-org/button'],
 	},
 };

@@ -47,7 +47,7 @@ function UrlDisplay({
 						{isLink ? (
 							<Link
 								href={value}
-								className='text-sm whitespace-nowrap overflow-hidden block'
+								className='text-sm whitespace-nowrap overflow-hidden block text-ellipsis'
 							>
 								{value}
 							</Link>

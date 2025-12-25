@@ -19,7 +19,7 @@ export default function ExtractorInput({ isPending }: ExtractorInputProps) {
 			placeholder={t('placeholder')}
 			size='lg'
 			classNames={{
-				inputWrapper: 'pr-0',
+				inputWrapper: 'pr-0 ring-1 ring-neutral-300 dark:ring-0',
 			}}
 			endContent={
 				<Button

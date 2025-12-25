@@ -36,14 +36,14 @@ function UrlDisplay({
 	const { pending } = useFormStatus();
 
 	return (
-		<div className='mb-3 border-2 border-slate-200/60 px-3 py-3 rounded-lg'>
+		<div className='mb-3 border-2 dark:border-slate-200/60 border-neutral-300/90 px-3 py-3 rounded-lg'>
 			<div className='flex items-center mb-1 gap-x-2'>
 				{IconComponent && IconComponent}
 				<p className='text-sm text-muted-foreground'>{label}</p>
 			</div>
 			<Skeleton isLoaded={!pending}>
 				<div className='flex items-center space-x-2 flex-1 max-w-full'>
-					<div className='max-w-full w-full overflow-hidden px-3 py-2 rounded-lg border-2 border-slate-200/60'>
+					<div className='max-w-full w-full overflow-hidden px-3 py-2 rounded-lg border-2 border-neutral-300/90 dark:border-slate-200/60'>
 						{isLink ? (
 							<Link
 								href={value}

@@ -51,6 +51,7 @@ function UrlDisplay({
 						{isLink ? (
 							<Link
 								href={value}
+								rel='noopener noreferrer'
 								className='text-sm whitespace-nowrap overflow-hidden block text-ellipsis'
 							>
 								<HighlightText text={value} query={searchQuery} />

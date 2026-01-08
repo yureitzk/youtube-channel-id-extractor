@@ -1,9 +1,9 @@
 import { useStore } from '@/app/hooks/useStore';
 import { useActionState, useEffect } from 'react';
-import { fetchChannelAction } from '../../server/actions/action';
-import ChannelInfo from '../ChannelInfo/ChannelInfo';
-import ErrorMessage from '../ErrorMessage';
-import ExtractorInput from './ExtractorInput';
+import { fetchChannelAction } from '@/app/server/actions/action';
+import ChannelInfo from '@/app/components/ChannelInfo/ChannelInfo';
+import ErrorMessage from '@/app/components/ErrorMessage';
+import ExtractorInput from '@/app/components/Extractor/ExtractorInput';
 
 const initialState = {
 	message: '',

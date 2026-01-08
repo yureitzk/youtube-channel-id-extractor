@@ -1,6 +1,6 @@
 'use server';
 
-import { ChannelDataType } from '../types/channelType';
+import { ChannelDataType } from '@/app/types/channelType';
 import {
 	customFetch,
 	extractChannelIdFromHtml,
@@ -8,7 +8,7 @@ import {
 	extractHtml,
 	getWaybackMachineSnapshotUrl,
 } from './helpers';
-import { generateChannelUrl } from './utils';
+import { generateChannelUrl } from '@/app/lib/utils';
 
 import { logger } from '@/app/lib/logger';
 

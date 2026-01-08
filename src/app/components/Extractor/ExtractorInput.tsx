@@ -1,8 +1,8 @@
 import { useTranslations } from 'next-intl';
 import { Button } from '@nextui-org/button';
-import { Input } from '@nextui-org/input';
 import { Search } from 'lucide-react';
-import Spinner from './Spinner';
+import Spinner from '@/app/components/Extractor/Spinner';
+import GenericInput from '@/app/components/GenericInput';
 
 interface ExtractorInputProps {
 	isPending: boolean;
@@ -12,15 +12,11 @@ export default function ExtractorInput({ isPending }: ExtractorInputProps) {
 	const t = useTranslations('ExtractorInput');
 
 	return (
-		<Input
+		<GenericInput
 			name='channel_url'
 			type='text'
 			isRequired
 			placeholder={t('placeholder')}
-			size='lg'
-			classNames={{
-				inputWrapper: 'pr-0 ring-1 ring-neutral-300 dark:ring-0',
-			}}
 			endContent={
 				<Button
 					type='submit'

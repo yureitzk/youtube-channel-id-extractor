@@ -1,26 +1,28 @@
-import { Input } from '@nextui-org/input';
 import { useTranslations } from 'next-intl';
+import GenericInput from '@/app/components/GenericInput';
 
 interface SearchChannelInputProps {
 	searchQuery: string;
 	onSearchChange: (value: string) => void;
+	className?: string;
 }
 
 export default function SearchChannelInput({
-	searchQuery,
+	searchQuery = '',
+	className = '',
 	onSearchChange,
 }: SearchChannelInputProps) {
 	const t = useTranslations('History');
 
 	return (
-		<Input
+		<GenericInput
 			type='text'
 			onValueChange={onSearchChange}
 			placeholder={t('search')}
 			value={searchQuery}
-			classNames={{
-				inputWrapper: 'pr-0 ring-1 ring-neutral-300 dark:ring-0 mb-2',
-			}}
+			inputWrapperClassName={className}
+			isClearable
+			onClear={() => onSearchChange('')}
 		/>
 	);
 }

@@ -38,6 +38,7 @@ export default function History() {
 			<SearchChannelInput
 				searchQuery={searchQuery}
 				onSearchChange={setSearchQuery}
+				className='mb-3'
 			/>
 
 			{channelsCount > 0 && (

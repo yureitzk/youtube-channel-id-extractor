@@ -31,18 +31,41 @@ export const useStore = () => {
 	};
 
 	/* eslint-disable react-hooks/rules-of-hooks */
-	const getAllChannels = (pageNumber: number, pageSize: number) => {
+	const getAllChannels = (
+		pageNumber: number,
+		pageSize: number,
+		searchQuery?: string,
+	) => {
 		const offset = (pageNumber - 1) * pageSize;
-
-		return useLiveQuery(
-			() => db.channels.reverse().offset(offset).limit(pageSize).toArray(),
-			[offset, pageSize],
-		);
+		return useLiveQuery(async () => {
+			if (searchQuery && searchQuery.trim()) {
+				const query = searchQuery.toLowerCase();
+				const allChannels = await db.channels.toArray();
+				const filtered = allChannels.filter(
+					(channel) =>
+						channel.name.toLowerCase().includes(query) ||
+						channel.channelId.toLowerCase().includes(query),
+				);
+				return filtered.reverse().slice(offset, offset + pageSize);
+			}
+			return db.channels.reverse().offset(offset).limit(pageSize).toArray();
+		}, [offset, pageSize, searchQuery]);
 	};
 
-	const countAllChannels = useLiveQuery(async () => {
-		return await db.channels.count();
-	});
+	const countAllChannels = (searchQuery?: string) => {
+		return useLiveQuery(async () => {
+			if (searchQuery && searchQuery.trim()) {
+				const query = searchQuery.toLowerCase();
+				const allChannels = await db.channels.toArray();
+				return allChannels.filter(
+					(channel) =>
+						channel.name.toLowerCase().includes(query) ||
+						channel.channelId.toLowerCase().includes(query),
+				).length;
+			}
+			return await db.channels.count();
+		}, [searchQuery]);
+	};
 
 	return {
 		addUniqueChannel,

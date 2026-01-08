@@ -9,10 +9,12 @@ import { Check, Copy, Globe, Code, Rss } from 'lucide-react';
 import { useState } from 'react';
 import { useFormStatus } from 'react-dom';
 import { useTranslations } from 'next-intl';
-import ChannelDeleteButton from './ChannelDeleteButton';
+import ChannelDeleteButton from '@/app/components/ChannelInfo/ChannelDeleteButton';
+import HighlightText from '@/app/components/ChannelInfo/HighlightText';
 
 interface ChannelInfoProps extends ChannelDataType {
 	id?: number;
+	searchQuery?: string;
 }
 
 interface UrlDisplayProps {
@@ -22,6 +24,7 @@ interface UrlDisplayProps {
 	onCopy: () => void;
 	isLink?: boolean;
 	IconComponent?: React.ReactNode;
+	searchQuery?: string;
 }
 
 function UrlDisplay({
@@ -31,6 +34,7 @@ function UrlDisplay({
 	onCopy,
 	isLink = false,
 	IconComponent,
+	searchQuery = '',
 }: UrlDisplayProps) {
 	const t = useTranslations('ChannelInfo');
 	const { pending } = useFormStatus();
@@ -49,10 +53,12 @@ function UrlDisplay({
 								href={value}
 								className='text-sm whitespace-nowrap overflow-hidden block text-ellipsis'
 							>
-								{value}
+								<HighlightText text={value} query={searchQuery} />
 							</Link>
 						) : (
-							<p className='text-sm whitespace-nowrap overflow-hidden'>{value}</p>
+							<p className='text-sm whitespace-nowrap overflow-hidden'>
+								<HighlightText text={value} query={searchQuery} />
+							</p>
 						)}
 					</div>
 					<Button
@@ -71,7 +77,12 @@ function UrlDisplay({
 	);
 }
 
-export default function ChannelInfo({ id, channelId, name }: ChannelInfoProps) {
+export default function ChannelInfo({
+	id,
+	channelId,
+	name,
+	searchQuery = '',
+}: ChannelInfoProps) {
 	const t = useTranslations('ChannelInfo');
 	const { pending } = useFormStatus();
 	const [isChannelIdCopied, setIsChannelIdCopied] = useState(false);
@@ -102,6 +113,7 @@ export default function ChannelInfo({ id, channelId, name }: ChannelInfoProps) {
 				isCopied={isChannelIdCopied}
 				onCopy={() => copyToClipboard(channelId, setIsChannelIdCopied)}
 				IconComponent={<Code className='h-4 w-4' />}
+				searchQuery={searchQuery}
 			/>
 			<UrlDisplay
 				label={t('channelUrl')}
@@ -110,6 +122,7 @@ export default function ChannelInfo({ id, channelId, name }: ChannelInfoProps) {
 				onCopy={() => copyToClipboard(channelUrl, setIsChannelUrlCopied)}
 				isLink
 				IconComponent={<Globe className='h-4 w-4' />}
+				searchQuery={searchQuery}
 			/>
 			<UrlDisplay
 				label={t('rssUrl')}
@@ -118,6 +131,7 @@ export default function ChannelInfo({ id, channelId, name }: ChannelInfoProps) {
 				onCopy={() => copyToClipboard(rssUrl, setIsRssUrlCopied)}
 				isLink
 				IconComponent={<Rss className='h-4 w-4' />}
+				searchQuery={searchQuery}
 			/>
 		</>
 	);
@@ -129,8 +143,10 @@ export default function ChannelInfo({ id, channelId, name }: ChannelInfoProps) {
 					{!id && (
 						<>
 							<Skeleton isLoaded={!pending}>
-								<div className='flex gap-x-2 items-centeri mb-2'>
-									<p className='font-bold'>{name}</p>
+								<div className='flex gap-x-2 items-center mb-2'>
+									<p className='font-bold'>
+										<HighlightText text={name} query={searchQuery} />
+									</p>
 								</div>
 							</Skeleton>
 							{renderChannelDetails()}
@@ -139,7 +155,14 @@ export default function ChannelInfo({ id, channelId, name }: ChannelInfoProps) {
 					{id && (
 						<>
 							<Accordion variant='light' isCompact={true}>
-								<AccordionItem key='1' title={<p className='font-bold'>{name}</p>}>
+								<AccordionItem
+									key='1'
+									title={
+										<p className='font-bold'>
+											<HighlightText text={name} query={searchQuery} />
+										</p>
+									}
+								>
 									{renderChannelDetails()}
 								</AccordionItem>
 							</Accordion>

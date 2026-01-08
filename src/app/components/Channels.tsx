@@ -8,17 +8,19 @@ import ChannelInfo from './ChannelInfo/ChannelInfo';
 interface ChannelsProps {
 	pageNumber: number;
 	pageSize: number;
+	searchQuery?: string;
 	className?: string;
 }
 
 export default function Channels({
 	pageNumber,
 	pageSize,
+	searchQuery,
 	className,
 }: ChannelsProps) {
 	const t = useTranslations('Channels');
 	const { getAllChannels } = useStore();
-	const channels = getAllChannels(pageNumber, pageSize);
+	const channels = getAllChannels(pageNumber, pageSize, searchQuery);
 
 	return (
 		<ul className={cn(className)}>
@@ -32,6 +34,7 @@ export default function Channels({
 								id={channel.id}
 								channelId={channel.channelId}
 								name={channel.name}
+								searchQuery={searchQuery || ''}
 							/>
 						</li>
 					))}

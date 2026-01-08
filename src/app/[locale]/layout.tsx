@@ -71,7 +71,7 @@ export default async function RootLayout({ children, params }: Props) {
 			<body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
 				<NextIntlClientProvider>
 					<Providers themeProps={{ attribute: 'class' }}>
-						<div className='max-w-screen-md m-auto px-4 min-h-screen flex flex-col'>
+						<div className='max-w-screen-md m-auto px-4 min-h-full flex flex-col'>
 							<Header />
 							<main>{children}</main>
 							<Footer className='mt-auto' />

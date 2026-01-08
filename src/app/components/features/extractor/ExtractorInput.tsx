@@ -1,8 +1,8 @@
 import { useTranslations } from 'next-intl';
 import { Button } from '@nextui-org/button';
 import { Search } from 'lucide-react';
-import Spinner from '@/app/components/Extractor/Spinner';
-import GenericInput from '@/app/components/GenericInput';
+import Spinner from '@ui/Spinner';
+import GenericInput from '@ui/GenericInput';
 
 interface ExtractorInputProps {
 	isPending: boolean;

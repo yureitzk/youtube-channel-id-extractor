@@ -3,10 +3,10 @@
 import { useTranslations } from 'next-intl';
 import { Pagination } from '@nextui-org/pagination';
 import { useEffect, useState } from 'react';
-import Channels from '@/app/components/Channels';
-import DeleteAllChannelsButton from '@/app/components/History/DeleteAllChannelsButton';
-import { useStore } from '@/app/hooks/useStore';
-import SearchChannelInput from '@/app/components/History/SearchChannelInput';
+import Channels from '@/app/components/features/channel/Channels';
+import DeleteAllChannelsButton from '@/app/components/features/history/DeleteAllChannelsButton';
+import { useStore } from '@hooks/useStore';
+import SearchChannelInput from '@/app/components/features/history/SearchChannelInput';
 
 export default function History() {
 	const t = useTranslations('History');

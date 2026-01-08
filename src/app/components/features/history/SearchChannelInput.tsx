@@ -1,5 +1,5 @@
 import { useTranslations } from 'next-intl';
-import GenericInput from '@/app/components/GenericInput';
+import GenericInput from '@ui/GenericInput';
 
 interface SearchChannelInputProps {
 	searchQuery: string;

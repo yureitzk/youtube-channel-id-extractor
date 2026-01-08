@@ -1,5 +1,5 @@
 import { useLiveQuery } from 'dexie-react-hooks';
-import { db } from '../db/schema';
+import { db } from '@db/schema';
 
 export const useStore = () => {
 	const addUniqueChannel = async (channelId: string, name: string) => {

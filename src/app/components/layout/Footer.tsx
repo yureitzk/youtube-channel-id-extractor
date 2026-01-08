@@ -1,7 +1,6 @@
 import Image from 'next/image';
-import {useTranslations} from 'next-intl';
-import githubIcon from '../../../public/github.svg';
-import { cn } from '../lib/utils';
+import { useTranslations } from 'next-intl';
+import { cn } from '@lib/utils';
 
 export default function Footer({ className }: { className?: string }) {
 	const t = useTranslations('Footer');
@@ -18,8 +17,10 @@ export default function Footer({ className }: { className?: string }) {
 					<Image
 						className='h-5 w-5 dark:invert mr-2'
 						priority
-						src={githubIcon}
+						src='/github.svg'
 						alt={t('githubImgAlt')}
+						width={35}
+						height={35}
 					/>
 					<span>{t('githubLink')}</span>
 				</a>

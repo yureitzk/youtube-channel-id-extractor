@@ -1,10 +1,10 @@
 'use server';
 
-import { fetchChannelData } from '@/app/lib/parser';
-import { urlSchema } from '@/app/lib/schemas';
+import { fetchChannelData } from '@lib/parser';
+import { urlSchema } from '@lib/schemas';
 import { ChannelType } from '@/app/types/channelType';
 
-import { logger } from '@/app/lib/logger';
+import { logger } from '@lib/logger';
 
 const log = logger.child({ module: 'action' });
 

@@ -1,5 +1,5 @@
 import { Input, InputProps } from '@nextui-org/input';
-import { cn } from '@/app/lib/utils';
+import { cn } from '@lib/utils';
 
 interface GenericInputProps extends Omit<InputProps, 'classNames'> {
 	className?: string;

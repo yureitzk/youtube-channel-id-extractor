@@ -1,4 +1,4 @@
-import { generateChannelUrl, generateRsslUrl } from '@/app/lib/utils';
+import { generateChannelUrl, generateRsslUrl } from '@lib/utils';
 import { ChannelDataType } from '@/app/types/channelType';
 import { Button } from '@nextui-org/button';
 import { Card, CardBody } from '@nextui-org/card';
@@ -9,8 +9,8 @@ import { Check, Copy, Globe, Code, Rss } from 'lucide-react';
 import { useState } from 'react';
 import { useFormStatus } from 'react-dom';
 import { useTranslations } from 'next-intl';
-import ChannelDeleteButton from '@/app/components/ChannelInfo/ChannelDeleteButton';
-import HighlightText from '@/app/components/ChannelInfo/HighlightText';
+import ChannelDeleteButton from '@/app/components/features/channel/ChannelDeleteButton';
+import HighlightText from '@/app/components/features/channel/HighlightText';
 
 interface ChannelInfoProps extends ChannelDataType {
 	id?: number;

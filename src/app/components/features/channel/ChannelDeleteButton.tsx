@@ -1,4 +1,4 @@
-import { useStore } from '@/app/hooks/useStore';
+import { useStore } from '@hooks/useStore';
 import { useState } from 'react';
 import { Button } from '@nextui-org/button';
 import { useTranslations } from 'next-intl';

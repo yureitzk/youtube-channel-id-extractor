@@ -1,9 +1,9 @@
 'use client';
 
 import { useTranslations } from 'next-intl';
-import { useStore } from '../hooks/useStore';
-import { cn } from '../lib/utils';
-import ChannelInfo from './ChannelInfo/ChannelInfo';
+import { useStore } from '@hooks/useStore';
+import { cn } from '@lib/utils';
+import ChannelInfo from '@/app/components/features/channel/ChannelInfo';
 
 interface ChannelsProps {
 	pageNumber: number;

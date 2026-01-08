@@ -1,5 +1,5 @@
 import { useTranslations } from 'next-intl';
-import Questions from '@/app/components/Faq/Questions';
+import Questions from '@/app/components/features/faq/Questions';
 
 export default function Faq() {
 	const t = useTranslations('Faq');

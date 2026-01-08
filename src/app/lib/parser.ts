@@ -8,9 +8,9 @@ import {
 	extractHtml,
 	getWaybackMachineSnapshotUrl,
 } from './helpers';
-import { generateChannelUrl } from '@/app/lib/utils';
+import { generateChannelUrl } from '@lib/utils';
 
-import { logger } from '@/app/lib/logger';
+import { logger } from '@lib/logger';
 
 const log = logger.child({ module: 'parser' });
 

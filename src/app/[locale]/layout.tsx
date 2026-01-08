@@ -2,10 +2,10 @@ import { Geist, Geist_Mono } from 'next/font/google';
 import { notFound } from 'next/navigation';
 import { NextIntlClientProvider, hasLocale } from 'next-intl';
 import { getTranslations } from 'next-intl/server';
-import Footer from '@/app/components/Footer';
-import Header from '@/app/components/Header';
+import Footer from '@/app/components/layout/Footer';
+import Header from '@/app/components/layout/Header';
 import '@/app/globals.css';
-import { getWebsiteDomain } from '@/app/lib/utils';
+import { getWebsiteDomain } from '@lib/utils';
 import { Providers } from '@/app/providers';
 import { routing } from '@/i18n/routing';
 

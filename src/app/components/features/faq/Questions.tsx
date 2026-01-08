@@ -1,7 +1,7 @@
 'use client'; // https://github.com/nextui-org/nextui/issues/1574
 
 import { Accordion, AccordionItem } from '@nextui-org/accordion';
-import ListItem from '@/app/components/Faq/ListItem';
+import ListItem from '@/app/components/features/faq/ListItem';
 import { useTranslations } from 'next-intl';
 
 export default function Questions() {

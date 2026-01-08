@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import { useTranslations } from 'next-intl';
-import RefreshButton from '@/app/components/Offline/RefreshButton';
+import RefreshButton from '@/app/components/offline/RefreshButton';
 
 export const metadata: Metadata = {
 	title: 'Offline',

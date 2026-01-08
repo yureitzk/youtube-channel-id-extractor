@@ -3,11 +3,10 @@
 import { History, BookText } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
-import {useTranslations} from 'next-intl';
+import { useTranslations } from 'next-intl';
 import { usePathname } from 'next/navigation';
-import youtubeIcon from '../../../public/youtube.svg';
-import ThemeSwitch from './ThemeSwitch';
-import { cn } from '../lib/utils';
+import ThemeSwitch from '@ui/ThemeSwitch';
+import { cn } from '@lib/utils';
 
 export default function Header() {
 	const t = useTranslations('Header');
@@ -20,7 +19,7 @@ export default function Header() {
 					<Image
 						className='dark:invert'
 						priority
-						src={youtubeIcon}
+						src='/youtube.svg'
 						alt={t('logoImgAlt')}
 						width={34}
 						height={34}

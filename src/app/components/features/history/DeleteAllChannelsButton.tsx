@@ -1,5 +1,5 @@
-import { useStore } from '@/app/hooks/useStore';
-import { cn } from '@/app/lib/utils';
+import { useStore } from '@hooks/useStore';
+import { cn } from '@lib/utils';
 import { Button } from '@nextui-org/button';
 import {
 	Modal,

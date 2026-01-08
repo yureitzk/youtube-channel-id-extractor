@@ -1,7 +1,7 @@
 import type { NextConfig } from 'next';
 import withSerwistInit from '@serwist/next';
 import createNextIntlPlugin from 'next-intl/plugin';
-import { getWebsiteDomain } from '@/app/lib/utils';
+import { getWebsiteDomain } from '@lib/utils';
 
 const allowedDomains = [
 	getWebsiteDomain(),

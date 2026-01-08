@@ -11,7 +11,12 @@
 	"History": {
 		"title": "Channel History",
 		"description": "The Channels you search for are saved offline in your browser automatically. You can see all of them here to manage them better.",
-		"search": "Enter channel name or URL"
+		"search": "Enter channel name or URL",
+		"noResultsFound": "No channels found matching your search",
+		"emptyState": {
+			"title": "No channels yet",
+			"description": "Start by searching for a YouTube channel on the home page. All channels you look up will appear here."
+		}
 	},
 	"MetaDataHistory": {
 		"title": "History"

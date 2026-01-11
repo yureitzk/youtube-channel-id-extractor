@@ -32,11 +32,11 @@ export default function Header() {
 							href='/history'
 							title={t('history')}
 							className={cn(
-								'flex items-center space-x-1 hover:text-primary transition-colors',
-								pathname === '/history' && 'text-primary font-semibold',
+								'flex items-center space-x-1 transition-colors hover:text-primary',
+								pathname === '/history' && 'font-semibold text-primary',
 							)}
 						>
-							<History className='w-5 h-5' />
+							<History className='h-5 w-5' />
 							<span className='hidden sm:inline'>{t('history')}</span>
 						</Link>
 					</li>
@@ -45,11 +45,11 @@ export default function Header() {
 							href='/faq'
 							title={t('faq')}
 							className={cn(
-								'flex items-center space-x-1 hover:text-primary transition-colors',
-								pathname === '/faq' && 'text-primary font-semibold',
+								'flex items-center space-x-1 transition-colors hover:text-primary',
+								pathname === '/faq' && 'font-semibold text-primary',
 							)}
 						>
-							<BookText className='w-5 h-5' />
+							<BookText className='h-5 w-5' />
 							<span className='hidden sm:inline'>{t('faq')}</span>
 						</Link>
 					</li>

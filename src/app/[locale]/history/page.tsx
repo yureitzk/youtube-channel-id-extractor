@@ -68,11 +68,11 @@ export default function History() {
 					/>
 				</>
 			) : hasChannels && debouncedSearchQuery ? (
-				<p className='text-center text-gray-600/90 dark:text-gray-300 py-8'>
+				<p className='py-8 text-center text-gray-600/90 dark:text-gray-300'>
 					{t('noResultsFound')}
 				</p>
 			) : !hasChannels ? (
-				<div className='text-center py-6'>
+				<div className='py-6 text-center'>
 					<p className='mb-1'>{t('emptyState.title')}</p>
 					<p className='text-sm'>{t('emptyState.description')}</p>
 				</div>

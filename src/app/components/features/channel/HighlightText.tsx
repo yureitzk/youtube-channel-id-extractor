@@ -1,5 +1,5 @@
 interface HighlightTextProps {
-text: string;
+	text: string;
 	query: string;
 	className?: string;
 	highlightClassName?: string;

@@ -40,24 +40,24 @@ function UrlDisplay({
 	const { pending } = useFormStatus();
 
 	return (
-		<div className='mb-3 border-2 dark:border-slate-200/60 border-neutral-300/90 px-3 py-3 rounded-lg'>
-			<div className='flex items-center mb-1 gap-x-2'>
+		<div className='mb-3 rounded-lg border-2 border-neutral-300/90 px-3 py-3 dark:border-slate-200/60'>
+			<div className='mb-1 flex items-center gap-x-2'>
 				{IconComponent && IconComponent}
-				<p className='text-sm text-muted-foreground'>{label}</p>
+				<p className='text-muted-foreground text-sm'>{label}</p>
 			</div>
 			<Skeleton isLoaded={!pending}>
-				<div className='flex items-center space-x-2 flex-1 max-w-full'>
-					<div className='max-w-full w-full overflow-hidden px-3 py-2 rounded-lg border-2 border-neutral-300/90 dark:border-slate-200/60'>
+				<div className='flex max-w-full flex-1 items-center space-x-2'>
+					<div className='w-full max-w-full overflow-hidden rounded-lg border-2 border-neutral-300/90 px-3 py-2 dark:border-slate-200/60'>
 						{isLink ? (
 							<Link
 								href={value}
 								rel='noopener noreferrer'
-								className='text-sm whitespace-nowrap overflow-hidden block text-ellipsis'
+								className='block overflow-hidden text-ellipsis whitespace-nowrap text-sm'
 							>
 								<HighlightText text={value} query={searchQuery} />
 							</Link>
 						) : (
-							<p className='text-sm whitespace-nowrap overflow-hidden'>
+							<p className='overflow-hidden whitespace-nowrap text-sm'>
 								<HighlightText text={value} query={searchQuery} />
 							</p>
 						)}
@@ -68,7 +68,7 @@ function UrlDisplay({
 						onPress={onCopy}
 						aria-label={t('copyToClipboard')}
 						title={t('copyToClipboard')}
-						className='min-w-[24px] w-[24px] h-[24px] p-0'
+						className='h-[24px] w-[24px] min-w-[24px] p-0'
 					>
 						{isCopied ? <Check className='h-3 w-3' /> : <Copy className='h-3 w-3' />}
 					</Button>
@@ -139,12 +139,12 @@ export default function ChannelInfo({
 
 	return (
 		<Card>
-			<CardBody className='p-4 overflow-y-hidden'>
+			<CardBody className='overflow-y-hidden p-4'>
 				<div className='mb-2'>
 					{!id && (
 						<>
 							<Skeleton isLoaded={!pending}>
-								<div className='flex gap-x-2 items-center mb-2'>
+								<div className='mb-2 flex items-center gap-x-2'>
 									<p className='font-bold'>
 										<HighlightText text={name} query={searchQuery} />
 									</p>

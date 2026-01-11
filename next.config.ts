@@ -5,7 +5,9 @@ import { getWebsiteDomain } from '@lib/utils';
 
 const allowedDomains = [
 	getWebsiteDomain(),
-	...(process.env.NODE_ENV !== 'production' ? ['localhost:3000', '127.0.0.1:3000'] : []),
+	...(process.env.NODE_ENV !== 'production'
+		? ['localhost:3000', '127.0.0.1:3000']
+		: []),
 ];
 
 const withSerwist = withSerwistInit({

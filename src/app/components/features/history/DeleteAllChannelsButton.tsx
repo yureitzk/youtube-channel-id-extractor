@@ -38,7 +38,7 @@ export default function DeleteAllChannelsButton({
 		<>
 			<Button
 				size='sm'
-				startContent={<Eraser className='w-5 h-5' />}
+				startContent={<Eraser className='h-5 w-5' />}
 				color='danger'
 				onPress={onOpen}
 				className={cn(className, 'font-medium')}
@@ -52,9 +52,11 @@ export default function DeleteAllChannelsButton({
 						<>
 							<ModalHeader className='flex flex-col gap-1'>{t('title')}</ModalHeader>
 							<ModalBody>
-								<p>{t.rich('note', {
-									strong: (chunks) => <strong>{chunks}</strong>,
-								})}</p>
+								<p>
+									{t.rich('note', {
+										strong: (chunks) => <strong>{chunks}</strong>,
+									})}
+								</p>
 								{t('confirmation')}
 							</ModalBody>
 							<ModalFooter>

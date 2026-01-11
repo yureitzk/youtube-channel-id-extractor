@@ -5,8 +5,10 @@ export default function NotFoundPage() {
 
 	return (
 		<>
-			<h1 className='text-center mx-auto mb-3'>{t('title')}</h1>
-			<p className='max-w-[460px] mx-auto text-center text-sm'>{t('description')}</p>
+			<h1 className='mx-auto mb-3 text-center'>{t('title')}</h1>
+			<p className='mx-auto max-w-[460px] text-center text-sm'>
+				{t('description')}
+			</p>
 		</>
 	);
 }

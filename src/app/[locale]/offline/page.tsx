@@ -11,8 +11,8 @@ export default function Offline() {
 
 	return (
 		<>
-			<div className='p-6 flex flex-col items-center justify-center text-center'>
-				<h1 className='text-3xl mb-4'>{t('title')}</h1>
+			<div className='flex flex-col items-center justify-center p-6 text-center'>
+				<h1 className='mb-4 text-3xl'>{t('title')}</h1>
 				<p className='mb-6'>{t('message')}</p>
 				<RefreshButton />
 			</div>

@@ -7,7 +7,7 @@ export default function Footer({ className }: { className?: string }) {
 
 	return (
 		<footer className={cn(className)}>
-			<div className='container mx-auto px-4 py-3 flex justify-center items-center'>
+			<div className='container mx-auto flex items-center justify-center px-4 py-3'>
 				<a
 					href='https://github.com/yureitzk/youtube-channel-id-extractor'
 					target='_blank'
@@ -15,7 +15,7 @@ export default function Footer({ className }: { className?: string }) {
 					className='flex items-center space-x-1 hover:text-blue-500 dark:hover:text-blue-400'
 				>
 					<Image
-						className='h-5 w-5 dark:invert mr-2'
+						className='mr-2 h-5 w-5 dark:invert'
 						priority
 						src='/github.svg'
 						alt={t('githubImgAlt')}

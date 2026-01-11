@@ -1,4 +1,7 @@
-import { extractChannelIdFromHtmlRss, extractChannelIdFromHtmlMetaTag } from './helpers';
+import {
+	extractChannelIdFromHtmlRss,
+	extractChannelIdFromHtmlMetaTag,
+} from './helpers';
 
 describe('Extracts channel ID from HTML', () => {
 	it('should extract channel ID from HTML containing an RSS link', async () => {

@@ -6,7 +6,7 @@ interface ErrorMessageProps {
 
 export default function ErrorMessage({ text }: ErrorMessageProps) {
 	return (
-		<h2 className='bg-red-100 text-red-800 border-l-4 border-red-500 p-3 rounded-md flex items-center'>
+		<h2 className='flex items-center rounded-md border-l-4 border-red-500 bg-red-100 p-3 text-red-800'>
 			<CircleX className='mr-2' />
 			{text}
 		</h2>

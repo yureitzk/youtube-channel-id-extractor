@@ -25,7 +25,7 @@ export default function Questions() {
 								return (
 									<>
 										<p>{chunks}</p>
-										<ul className='list-disc pl-6 mt-2 space-y-1'>
+										<ul className='mt-2 list-disc space-y-1 pl-6'>
 											<ListItem>https://www.youtube.com/channel/channel_id</ListItem>
 											<ListItem>https://www.youtube.com/user/username</ListItem>
 											<ListItem>https://www.youtube.com/@channel_handle</ListItem>
@@ -42,7 +42,7 @@ export default function Questions() {
 							},
 							support: (chunks) => <p>{chunks}</p>,
 						})}
-						<ul className='list-disc pl-6 mt-2'>
+						<ul className='mt-2 list-disc pl-6'>
 							<ListItem>
 								https://web.archive.org/web/20211218220114/https://www.youtube.com/c/custom_url
 							</ListItem>

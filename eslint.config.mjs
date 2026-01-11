@@ -9,12 +9,24 @@ const compat = new FlatCompat({
 	baseDirectory: __dirname,
 });
 
-const eslintConfig = [{
-    ignores: ["node_modules/**", ".next/**", "out/**", "build/**", "next-env.d.ts", "public/**"]
-}, ...compat.extends('next/core-web-vitals', 'next/typescript'), {
-    rules: {
-        'jsx-quotes': [1, 'prefer-single'],
-    },
-}];
+const eslintConfig = [
+	{
+		ignores: [
+			'node_modules/**',
+			'.next/**',
+			'out/**',
+			'build/**',
+			'next-env.d.ts',
+			'public/**',
+		],
+	},
+	...compat.extends('next/core-web-vitals', 'next/typescript'),
+	...compat.extends('plugin:prettier/recommended'),
+	{
+		rules: {
+			'jsx-quotes': [1, 'prefer-single'],
+		},
+	},
+];
 
 export default eslintConfig;
